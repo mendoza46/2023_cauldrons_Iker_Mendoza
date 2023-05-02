@@ -1188,62 +1188,77 @@ const data = {
 
     console.log("//////////////////////////////");
 // 7.- Mostrar el porcentaje de cauldrons dañados separados por temporada
-console.log("Ariketa 7: ");
+    console.log("Ariketa 7: ");
 
-const porcentajeCauldronsAutumn_seasson = Math.floor(damagedAutumn_seassonCauldrons * 100 / data.cauldrons.autumn_seasson.length);
-console.log("El porcentaje de los cauldrons dañados en la autumn seasson es de: " + porcentajeCauldronsAutumn_seasson + "%.");
+    const porcentajeCauldronsAutumn_seasson = Math.floor(damagedAutumn_seassonCauldrons * 100 / data.cauldrons.autumn_seasson.length);
+    console.log("El porcentaje de los cauldrons dañados en la autumn seasson es de: " + porcentajeCauldronsAutumn_seasson + "%.");
 
-const porcentajeCauldronsspring_seasson = Math.floor(damagedSpring_seassonCauldrons * 100 / data.cauldrons.spring_seasson.length);
-console.log("El porcentaje de los cauldrons dañados en la spring seasson es de: " + porcentajeCauldronsspring_seasson + "%.");
+    const porcentajeCauldronsspring_seasson = Math.floor(damagedSpring_seassonCauldrons * 100 / data.cauldrons.spring_seasson.length);
+    console.log("El porcentaje de los cauldrons dañados en la spring seasson es de: " + porcentajeCauldronsspring_seasson + "%.");
 
-const porcentajeCauldronsSummer_seasson = Math.floor(damagedSummer_seassonCauldrons * 100 / data.cauldrons.summer_seasson.length);
-console.log("El porcentaje de los cauldrons dañados en la summer seasson es de: " + porcentajeCauldronsSummer_seasson + "%.");
+    const porcentajeCauldronsSummer_seasson = Math.floor(damagedSummer_seassonCauldrons * 100 / data.cauldrons.summer_seasson.length);
+    console.log("El porcentaje de los cauldrons dañados en la summer seasson es de: " + porcentajeCauldronsSummer_seasson + "%.");
 
-const porcentajeCauldronswinter_seasson = Math.floor(damagedWinter_seassonCauldrons * 100 / data.cauldrons.winter_seasson.length);
-console.log("El porcentaje de los cauldrons dañados en la winter seasson es de: " + porcentajeCauldronswinter_seasson + "%.");
+    const porcentajeCauldronswinter_seasson = Math.floor(damagedWinter_seassonCauldrons * 100 / data.cauldrons.winter_seasson.length);
+    console.log("El porcentaje de los cauldrons dañados en la winter seasson es de: " + porcentajeCauldronswinter_seasson + "%.");
 
-console.log("//////////////////////////////");
+    console.log("//////////////////////////////");
 // 8.- Mostrar el porcentaje de cauldrons de "Plexiglass" en "winter_seasson"
+    console.log("Ariketa 8: ");
+
+    let plexiglassEnTotal = 0;
+
+    for(let i = 0; i < data.cauldrons.winter_seasson.length; i++)
+    {
+        if(data.cauldrons.winter_seasson[i].type === "Plexiglass")
+        plexiglassEnTotal++;
+    }
+
+    const porcentajeDePlexiglass = Math.floor(plexiglassEnTotal * 100 / data.cauldrons.winter_seasson.length);
+
+    console.log("El porcentaje de Plexiglasses en la winter seasson es de: " + porcentajeDePlexiglass + "%.");
+
+    console.log("//////////////////////////////");
 
 // 9.- Mostrar el número de cauldrons de color "Orange" en buen estado
 
-console.log("Ariketa 9: ");
+    console.log("Ariketa 9: ");
 
-let cauldronOranges = 0;
-for(let i = 0; i < data.cauldrons.autumn_seasson.length; i++)
-{
-    if(data.cauldrons.autumn_seasson[i].color === "Orange")
+    let cauldronOranges = 0;
+    for(let i = 0; i < data.cauldrons.autumn_seasson.length; i++)
     {
-        if(!data.cauldrons.autumn_seasson[i].damaged)
-        cauldronOranges++
+        if(data.cauldrons.autumn_seasson[i].color === "Orange")
+        {
+            if(!data.cauldrons.autumn_seasson[i].damaged)
+            cauldronOranges++
+        }
     }
-}
-for(let i = 0; i < data.cauldrons.spring_seasson.length; i++)
-{
-    if(data.cauldrons.spring_seasson[i].color === "Orange")
+    for(let i = 0; i < data.cauldrons.spring_seasson.length; i++)
     {
-        if(!data.cauldrons.spring_seasson[i].damaged)
-        cauldronOranges++
+        if(data.cauldrons.spring_seasson[i].color === "Orange")
+        {
+            if(!data.cauldrons.spring_seasson[i].damaged)
+            cauldronOranges++
+        }
     }
-}
-for(let i = 0; i < data.cauldrons.summer_seasson.length; i++)
-{
-    if(data.cauldrons.summer_seasson[i].color === "Orange")
+    for(let i = 0; i < data.cauldrons.summer_seasson.length; i++)
     {
-        if(!data.cauldrons.summer_seasson[i].damaged)
-        cauldronOranges++
+        if(data.cauldrons.summer_seasson[i].color === "Orange")
+        {
+            if(!data.cauldrons.summer_seasson[i].damaged)
+            cauldronOranges++
+        }
     }
-}
-for(let i = 0; i < data.cauldrons.winter_seasson.length; i++)
-{
-    if(data.cauldrons.winter_seasson[i].color === "Orange")
+    for(let i = 0; i < data.cauldrons.winter_seasson.length; i++)
     {
-        if(!data.cauldrons.winter_seasson[i].damaged)
-        cauldronOranges++
+        if(data.cauldrons.winter_seasson[i].color === "Orange")
+        {
+            if(!data.cauldrons.winter_seasson[i].damaged)
+            cauldronOranges++
+        }
     }
-}
 
-console.log("Cantidad de cauldrones Naranjas en buen estado: " + cauldronOranges);
+    console.log("Cantidad de cauldrones Naranjas en buen estado: " + cauldronOranges);
 
-console.log("//////////////////////////////");
+    console.log("//////////////////////////////");
 // 10.- Mostrar el listado de posibles colores de cauldrons, sin repetir color.
