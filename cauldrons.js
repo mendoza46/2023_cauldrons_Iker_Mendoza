@@ -1188,7 +1188,21 @@ const data = {
 
     console.log("//////////////////////////////");
 // 7.- Mostrar el porcentaje de cauldrons dañados separados por temporada
+console.log("Ariketa 7: ");
 
+const porcentajeCauldronsAutumn_seasson = Math.floor(damagedAutumn_seassonCauldrons * 100 / data.cauldrons.autumn_seasson.length);
+console.log("El porcentaje de los cauldrons dañados en la autumn seasson es de: " + porcentajeCauldronsAutumn_seasson + "%.");
+
+const porcentajeCauldronsspring_seasson = Math.floor(damagedSpring_seassonCauldrons * 100 / data.cauldrons.spring_seasson.length);
+console.log("El porcentaje de los cauldrons dañados en la spring seasson es de: " + porcentajeCauldronsspring_seasson + "%.");
+
+const porcentajeCauldronsSummer_seasson = Math.floor(damagedSummer_seassonCauldrons * 100 / data.cauldrons.summer_seasson.length);
+console.log("El porcentaje de los cauldrons dañados en la summer seasson es de: " + porcentajeCauldronsSummer_seasson + "%.");
+
+const porcentajeCauldronswinter_seasson = Math.floor(damagedWinter_seassonCauldrons * 100 / data.cauldrons.winter_seasson.length);
+console.log("El porcentaje de los cauldrons dañados en la winter seasson es de: " + porcentajeCauldronswinter_seasson + "%.");
+
+console.log("//////////////////////////////");
 // 8.- Mostrar el porcentaje de cauldrons de "Plexiglass" en "winter_seasson"
 
 // 9.- Mostrar el número de cauldrons de color "Orange" en buen estado
