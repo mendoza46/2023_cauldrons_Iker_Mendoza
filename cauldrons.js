@@ -1115,6 +1115,43 @@ const data = {
     console.log("//////////////////////////////");
 // 5.- Mostrar el total de cauldrons de madera "wood" rotos, suma de todas las temporadas
 
+    console.log("Ariketa 5: ");
+    let totalDeCauldronsDeMaderaRotos = 0;
+    for(let i = 0; i < data.cauldrons.autumn_seasson.length; i++)
+    {
+        if(data.cauldrons.autumn_seasson[i].type === "Wood")
+        {
+            if(data.cauldrons.autumn_seasson[i].damaged)
+            totalDeCauldronsDeMaderaRotos++;
+        }
+    }
+    for(let i = 0; i < data.cauldrons.spring_seasson.length; i++)
+    {
+        if(data.cauldrons.spring_seasson[i].type === "Wood")
+        {
+            if(data.cauldrons.spring_seasson[i].damaged)
+            totalDeCauldronsDeMaderaRotos++;
+        }
+    }
+    for(let i = 0; i < data.cauldrons.summer_seasson.length; i++)
+    {
+        if(data.cauldrons.summer_seasson[i].type === "Wood")
+        {
+            if(data.cauldrons.summer_seasson[i].damaged)
+            totalDeCauldronsDeMaderaRotos++;
+        }
+    }
+    for(let i = 0; i < data.cauldrons.winter_seasson.length; i++)
+    {
+        if(data.cauldrons.winter_seasson[i].type === "Wood")
+        {
+            if(data.cauldrons.winter_seasson[i].damaged)
+            totalDeCauldronsDeMaderaRotos++;
+        }
+    }
+
+    console.log("Cantidad de cauldrons de madera rotos: "+ totalDeCauldronsDeMaderaRotos)
+
 // 6.- Mostrar la Id y magic_description de los cauldron llamados "Brassicaceae"
 
 // 7.- Mostrar el porcentaje de cauldrons dañados separados por temporada
