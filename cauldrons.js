@@ -1030,3 +1030,65 @@ const data = {
     console.log("Cantidad de cauldrons en la winter seasson: " + data.cauldrons.winter_seasson.length);
 
     console.log("//////////////////////////////");
+
+    // 3.- Mostrar los Cauldrons rotos separados por temporada
+
+    console.log("Ariketa 3: ");
+
+    let damagedAutumn_seassonCauldrons = 0;
+
+    for(let i = 0; i < data.cauldrons.autumn_seasson.length; i++)
+    {
+        if(data.cauldrons.autumn_seasson[i].damaged)
+        {
+            // console.log(i);
+            damagedAutumn_seassonCauldrons++;
+        }
+    }
+    console.log("Cantidad de cauldrons dañados en la autumn seasson: " + damagedAutumn_seassonCauldrons);
+
+    let damagedSpring_seassonCauldrons = 0;
+    for(let i = 0; i < data.cauldrons.spring_seasson.length; i++)
+    {
+        if(data.cauldrons.spring_seasson[i].damaged)
+        {
+            damagedSpring_seassonCauldrons++;
+        }
+    }
+    console.log("Cantidad de cauldrons dañados en la spring seasson: " + damagedSpring_seassonCauldrons);
+
+    let damagedSummer_seassonCauldrons = 0;
+    for(let i = 0; i < data.cauldrons.summer_seasson.length; i++)
+    {
+        if(data.cauldrons.summer_seasson[i].damaged)
+        {
+            damagedSummer_seassonCauldrons++;
+        }
+    }
+    console.log("Cantidad de cauldrons dañados en la summer seasson: " + damagedSummer_seassonCauldrons);
+
+    let damagedWinter_seassonCauldrons = 0;
+    for(let i = 0; i < data.cauldrons.winter_seasson.length; i++)
+    {
+        if(data.cauldrons.winter_seasson[i].damaged)
+        {
+            // console.log(damagedCauldrons);
+            damagedWinter_seassonCauldrons++;
+        }
+    }
+    console.log("Cantidad de cauldrons dañados en la winter seasson: " + damagedWinter_seassonCauldrons);
+   
+    console.log("//////////////////////////////");
+// 4.- Mostrar el color de los cauldron con magic_description "Naproxen"
+
+// 5.- Mostrar el total de cauldrons de madera "wood" rotos, suma de todas las temporadas
+
+// 6.- Mostrar la Id y magic_description de los cauldron llamados "Brassicaceae"
+
+// 7.- Mostrar el porcentaje de cauldrons dañados separados por temporada
+
+// 8.- Mostrar el porcentaje de cauldrons de "Plexiglass" en "winter_seasson"
+
+// 9.- Mostrar el número de cauldrons de color "Orange" en buen estado
+
+// 10.- Mostrar el listado de posibles colores de cauldrons, sin repetir color.
