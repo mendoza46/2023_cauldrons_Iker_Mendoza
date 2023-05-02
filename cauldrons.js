@@ -1156,41 +1156,80 @@ const data = {
 // 6.- Mostrar la Id y magic_description de los cauldron llamados "Brassicaceae"
 
 
-console.log("Ariketa 6: ");
-for(let i = 0; i < data.cauldrons.autumn_seasson.length; i++)
-{
-    if(data.cauldrons.autumn_seasson[i].name === "Brassicaceae")
+    console.log("Ariketa 6: ");
+    for(let i = 0; i < data.cauldrons.autumn_seasson.length; i++)
     {
-        console.log("Id: " + data.cauldrons.autumn_seasson[i].id + ",       magic description: " + data.cauldrons.autumn_seasson[i].magic_description)
+        if(data.cauldrons.autumn_seasson[i].name === "Brassicaceae")
+        {
+            console.log("Id: " + data.cauldrons.autumn_seasson[i].id + ",       magic description: " + data.cauldrons.autumn_seasson[i].magic_description)
+        }
     }
-}
-for(let i = 0; i < data.cauldrons.spring_seasson.length; i++)
-{
-    if(data.cauldrons.spring_seasson[i].name === "Brassicaceae")
+    for(let i = 0; i < data.cauldrons.spring_seasson.length; i++)
     {
-        console.log("Id: " + data.cauldrons.spring_seasson[i].id + ",       magic description: " + data.cauldrons.spring_seasson[i].magic_description)
+        if(data.cauldrons.spring_seasson[i].name === "Brassicaceae")
+        {
+            console.log("Id: " + data.cauldrons.spring_seasson[i].id + ",       magic description: " + data.cauldrons.spring_seasson[i].magic_description)
+        }
     }
-}
-for(let i = 0; i < data.cauldrons.summer_seasson.length; i++)
-{
-    if(data.cauldrons.summer_seasson[i].name === "Brassicaceae")
+    for(let i = 0; i < data.cauldrons.summer_seasson.length; i++)
     {
-        console.log("Id: " + data.cauldrons.summer_seasson[i].id + ",       magic description: " + data.cauldrons.summer_seasson[i].magic_description)
+        if(data.cauldrons.summer_seasson[i].name === "Brassicaceae")
+        {
+            console.log("Id: " + data.cauldrons.summer_seasson[i].id + ",       magic description: " + data.cauldrons.summer_seasson[i].magic_description)
+        }
     }
-}
-for(let i = 0; i < data.cauldrons.winter_seasson.length; i++)
-{
-    if(data.cauldrons.winter_seasson[i].name === "Brassicaceae")
+    for(let i = 0; i < data.cauldrons.winter_seasson.length; i++)
     {
-        console.log("Id: " + data.cauldrons.winter_seasson[i].id + ",       magic description: " + data.cauldrons.winter_seasson[i].magic_description)
+        if(data.cauldrons.winter_seasson[i].name === "Brassicaceae")
+        {
+            console.log("Id: " + data.cauldrons.winter_seasson[i].id + ",       magic description: " + data.cauldrons.winter_seasson[i].magic_description)
+        }
     }
-}
 
-console.log("//////////////////////////////");
+    console.log("//////////////////////////////");
 // 7.- Mostrar el porcentaje de cauldrons dañados separados por temporada
 
 // 8.- Mostrar el porcentaje de cauldrons de "Plexiglass" en "winter_seasson"
 
 // 9.- Mostrar el número de cauldrons de color "Orange" en buen estado
 
+console.log("Ariketa 9: ");
+
+let cauldronOranges = 0;
+for(let i = 0; i < data.cauldrons.autumn_seasson.length; i++)
+{
+    if(data.cauldrons.autumn_seasson[i].color === "Orange")
+    {
+        if(!data.cauldrons.autumn_seasson[i].damaged)
+        cauldronOranges++
+    }
+}
+for(let i = 0; i < data.cauldrons.spring_seasson.length; i++)
+{
+    if(data.cauldrons.spring_seasson[i].color === "Orange")
+    {
+        if(!data.cauldrons.spring_seasson[i].damaged)
+        cauldronOranges++
+    }
+}
+for(let i = 0; i < data.cauldrons.summer_seasson.length; i++)
+{
+    if(data.cauldrons.summer_seasson[i].color === "Orange")
+    {
+        if(!data.cauldrons.summer_seasson[i].damaged)
+        cauldronOranges++
+    }
+}
+for(let i = 0; i < data.cauldrons.winter_seasson.length; i++)
+{
+    if(data.cauldrons.winter_seasson[i].color === "Orange")
+    {
+        if(!data.cauldrons.winter_seasson[i].damaged)
+        cauldronOranges++
+    }
+}
+
+console.log("Cantidad de cauldrones Naranjas en buen estado: " + cauldronOranges);
+
+console.log("//////////////////////////////");
 // 10.- Mostrar el listado de posibles colores de cauldrons, sin repetir color.
