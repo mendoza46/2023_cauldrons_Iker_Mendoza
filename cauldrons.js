@@ -1151,9 +1151,42 @@ const data = {
     }
 
     console.log("Cantidad de cauldrons de madera rotos: "+ totalDeCauldronsDeMaderaRotos)
+    console.log("//////////////////////////////");
 
 // 6.- Mostrar la Id y magic_description de los cauldron llamados "Brassicaceae"
 
+
+console.log("Ariketa 6: ");
+for(let i = 0; i < data.cauldrons.autumn_seasson.length; i++)
+{
+    if(data.cauldrons.autumn_seasson[i].name === "Brassicaceae")
+    {
+        console.log("Id: " + data.cauldrons.autumn_seasson[i].id + ",       magic description: " + data.cauldrons.autumn_seasson[i].magic_description)
+    }
+}
+for(let i = 0; i < data.cauldrons.spring_seasson.length; i++)
+{
+    if(data.cauldrons.spring_seasson[i].name === "Brassicaceae")
+    {
+        console.log("Id: " + data.cauldrons.spring_seasson[i].id + ",       magic description: " + data.cauldrons.spring_seasson[i].magic_description)
+    }
+}
+for(let i = 0; i < data.cauldrons.summer_seasson.length; i++)
+{
+    if(data.cauldrons.summer_seasson[i].name === "Brassicaceae")
+    {
+        console.log("Id: " + data.cauldrons.summer_seasson[i].id + ",       magic description: " + data.cauldrons.summer_seasson[i].magic_description)
+    }
+}
+for(let i = 0; i < data.cauldrons.winter_seasson.length; i++)
+{
+    if(data.cauldrons.winter_seasson[i].name === "Brassicaceae")
+    {
+        console.log("Id: " + data.cauldrons.winter_seasson[i].id + ",       magic description: " + data.cauldrons.winter_seasson[i].magic_description)
+    }
+}
+
+console.log("//////////////////////////////");
 // 7.- Mostrar el porcentaje de cauldrons dañados separados por temporada
 
 // 8.- Mostrar el porcentaje de cauldrons de "Plexiglass" en "winter_seasson"
