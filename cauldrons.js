@@ -1262,3 +1262,19 @@ const data = {
 
     console.log("//////////////////////////////");
 // 10.- Mostrar el listado de posibles colores de cauldrons, sin repetir color.
+
+console.log("Ariketa 10: ");
+
+let colores = [""];
+for(let i = 0; i < data.cauldrons.autumn_seasson.length; i++)
+{
+    for(let j = 0; j < colores.length; j++)
+    {
+        console.log(j)
+        if(data.cauldrons.autumn_seasson[i].color !== colores[j])
+        {
+            colores[j] = data.cauldrons.autumn_seasson[i].color;
+            console.log(colores[j]);
+        }
+    }
+}
